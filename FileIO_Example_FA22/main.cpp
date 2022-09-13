@@ -5,6 +5,7 @@
 using namespace std;
 
 string inputFileName = "input.dat";
+string outputFileName = "output.dat";
 
 int main()
 {
@@ -15,7 +16,10 @@ int main()
 
 	infile >> readIn;
 
-	cout << readIn;
+	ofstream outfile;
+	outfile.open(outputFileName);
+
+	outfile << readIn;
 
 	return 0;
 }
