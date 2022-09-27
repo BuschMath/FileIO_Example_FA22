@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string inputFileName = "C:/Users/busch/OneDrive - Iowa Central Community College/Documents/Visual Studio 2019/Projects/FileIO_Example_FA22/FileIO_Example_FA22/input.dat";
+string inputFileName = "input.dat";
 string outputFileName = "output.dat";
 
 int main()
@@ -16,9 +16,12 @@ int main()
 		cout << "Can't find file!\n";
 
 	string readIn;
+	int readIn2;
 
 	infile >> readIn;
-	cout << readIn;
+	infile >> readIn2;
+	cout << readIn << " " << readIn2 << endl;
+	cout << stoi(readIn) + readIn2;
 
 	ofstream outfile;
 	outfile.open(outputFileName);
